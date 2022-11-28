@@ -1,0 +1,5 @@
+rheynal=read.delim("clipboard")
+View(rheynal)
+str(rheynal)
+mean(rheynal$Volume)
+t.test(rheynal$Volume, mu=14500)
