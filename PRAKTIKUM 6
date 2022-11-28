@@ -1,0 +1,11 @@
+##TUGAS 4 LATIHAN 1##
+rheynal=read.csv("C:/Users/mrhey/Documents/KULIAH SEASON 3/STATISTIKA/PRAKTIKUM/PRAKTIKUM 6/DirectMarketing.csv")
+View(rheynal)
+hist(rheynal$AmountSpent)
+dz=density(rheynal$AmountSpent)
+plot(dz)
+
+
+##TUGAS 4 LATIHAN 2##
+rheynal=read.csv("C:/Users/mrhey/Documents/KULIAH SEASON 3/STATISTIKA/PRAKTIKUM/PRAKTIKUM 6/houseprices.csv")
+plot(rheynal$Price, rheynal$aqfT)
