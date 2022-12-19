@@ -1,0 +1,18 @@
+#LATIHAN PERTAMA 
+df_rheynal=read.delim("clipboard")
+head(df_rheynal)
+model_reg=lm(df_rheynal$Y~df_rheynal$X)
+summary(model_reg)
+
+#LATIHAN KEDUA
+df_rheynal=read.delim("clipboard")
+df_rheynal$brick_dummy <- ifelse(df_rheynal$Brick =="Yes", 1,0)
+df_rheynal$N_dummy1 <- ifelse(df_rheynal$Neighborhood =="West", 1,0)
+df_rheynal$N_dummy2 <- ifelse(df_rheynal$Neighborhood =="North", 1,0)
+model=lm(df_rheynal$Price~df_rheynal$SqFt+df_rheynal$Bedrooms+df_rheynal$Bathrooms+df_rheynal$brick_dummy+df_rheynal$N_dummy1+df_rheynal$N_dummy2)
+summary(model)
+
+
+by(df_rheynal$Price, df_rheynal$Neighborhood, mean)
+by(df_rheynal$Price, df_rheynal$Brick, mean)
+
