@@ -1,0 +1,11 @@
+#LATIHAN KEDUA TUGAS 1
+df_rheynal=PlantGrowth
+View(df_rheynal)
+
+#LATIHAN KEDUA TUGAS 2
+model <- aov(weight~group, data=df_rheynal)
+summary(model)
+
+#LATIHAN KEDUA TUGAS 3
+Tukey.test <- TukeyHSD(model)
+Tukey.test
